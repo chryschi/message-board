@@ -5,6 +5,14 @@
     <title>Message Board</title>
   </head>
   <body>
-    This is the Homepage
+    <h1>This is the Homepage</h1>
+    <ul>
+      <% messages.map((message)=> { %>
+      <li>
+        <%= message.user %>:
+        <%= message.text %>
+      </li>
+      <% }) %>
+    </ul>
   </body>
 </html>
