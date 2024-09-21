@@ -11,9 +11,7 @@ const getMessageById = async (req, res) => {
     return;
   }
 
-  res.send(
-    `Message found: ${message.text} by ${message.user}, posted on ${message.added}`,
-  );
+  res.render("messageDetails", { message: message });
 };
 
 module.exports = { getMessageById };

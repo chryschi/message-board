@@ -13,6 +13,7 @@ messagesRouter.post("/", (req, res) => {
   messages.push({
     text: req.body.message,
     user: req.body.authorName,
+    added: new Date(),
     id: newId,
   });
   console.log(`Posted message with id: ${newId}`);
